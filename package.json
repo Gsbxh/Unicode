@@ -1,6 +1,6 @@
 {
-  "name": "unicode-text-decorator",
-  "version": "0.1.1",
+  "name": "Unicode",
+  "version": "0.1.2",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryo-a/unicode-text-decorator.git"
+    "url": "git+https://github.com/Gsbxh/Unicode.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryo-a/unicode-text-decorator/issues"
+    "url": "https://github.com/Gsbxh/Unicode/issues"
   },
-  "homepage": "https://github.com/ryo-a/unicode-text-decorator#readme",
+  "homepage": "https://github.com/Gsbxh/Unicode#readme",
   "devDependencies": {
     "jest": "^28.1.0"
   }
