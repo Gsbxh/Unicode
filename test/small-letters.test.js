@@ -22,6 +22,7 @@ const correctAnswerSmallWithFallBack = {
     square: '🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉',
     parenthesized: '⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵',
     fullwidth: 'ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ',
+    smallcaps: 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ',
 };
 
 test('bold_serif Small (Fallback)', () => {
@@ -68,6 +69,10 @@ test('italic_sans_serif Small (Fallback)', () => {
     expect(utd.decorate(testString, 'italic_sans_serif')).toBe(correctAnswerSmallWithFallBack.italic_sans_serif);
 });
 
+test('smallcaps Small (Fallback)', () => {
+    expect(utd.decorate(testString, 'smallcaps')).toBe(correctAnswerSmallWithFallBack.smallcaps);
+});
+
 
 const correctAnswerSmall = {
     bold_serif: "𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳",
@@ -89,6 +94,7 @@ const correctAnswerSmall = {
     square: 'abcdefghijklmnopqrstuvwxyz',
     parenthesized: '⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵',
     fullwidth: 'ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ',
+    smallcaps: 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ',
 };
 
 test('bold_serif Small (No Fallback)', () => {
@@ -133,4 +139,8 @@ test('bold_sans_serif Small (No Fallback)', () => {
 
 test('italic_sans_serif Small (No Fallback)', () => {
     expect(utd.decorate(testString, 'italic_sans_serif')).toBe(correctAnswerSmall.italic_sans_serif);
+});
+
+test('smallcaps Small (No Fallback)', () => {
+    expect(utd.decorate(testString, 'smallcaps')).toBe(correctAnswerSmall.smallcaps);
 });
