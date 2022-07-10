@@ -22,6 +22,7 @@ const correctAnswerExceptions = {
     square: "!@#$%^&*()-=+`'[]\\",
     parenthesized: "!@#$%^&*()-=+`'[]\\",
     fullwidth: "!@#$%^&*()-=+`'[]\\",
+    smallcaps: "!@#$%^&*()-=+`'[]\\",
 };
 
 test('bold_serif Numbers', () => {
@@ -66,4 +67,8 @@ test('bold_sans_serif Numbers', () => {
 
 test('italic_sans_serif Numbers', () => {
     expect(utd.decorate(testString, 'italic_sans_serif')).toBe(correctAnswerExceptions.italic_sans_serif);
+});
+
+test('smallcaps Numbers', () => {
+    expect(utd.decorate(testString, 'smallcaps')).toBe(correctAnswerExceptions.smallcaps);
 });
