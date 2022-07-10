@@ -22,6 +22,7 @@ const correctAnswerCapital = {
     square: '🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉',
     parenthesized: '🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧🄨🄩',
     fullwidth: 'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ',
+    smallcaps: 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ'
 };
 
 test('bold_serif Capital', () => {
@@ -68,4 +69,8 @@ test('bold_sans_serif Capital', () => {
 
 test('italic_sans_serif Capital', () => {
     expect(utd.decorate(testString, 'italic_sans_serif')).toBe(correctAnswerCapital.italic_sans_serif);
+});
+
+test('smallcaps Capital', () => {
+    expect(utd.decorate(testString, 'smallcaps')).toBe(correctAnswerCapital.smallcaps);
 });
