@@ -22,6 +22,7 @@ const correctAnswerNumbers = {
     square: '0123456789',
     parenthesized: '0123456789',
     fullwidth: '０１２３４５６７８９',
+    smallcaps: '𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗',
 };
 
 test('bold_serif Numbers', () => {
@@ -66,4 +67,8 @@ test('bold_sans_serif Numbers', () => {
 
 test('italic_sans_serif Numbers', () => {
     expect(utd.decorate(testString, 'italic_sans_serif')).toBe(correctAnswerNumbers.italic_sans_serif);
+});
+
+test('smallcaps Numbers', () => {
+    expect(utd.decorate(testString, 'smallcaps')).toBe(correctAnswerNumbers.smallcaps);
 });
